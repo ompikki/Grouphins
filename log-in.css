@@ -1,0 +1,217 @@
+body {
+    background: linear-gradient(to right, #62cff4, #2c67f2);
+    font-family: 'Times new roman';
+    color: black;
+}
+
+.login-container {
+    width: 350px;
+    margin: 150px auto;
+    padding: 10px 25px 30px 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: float 10s ease-in-out infinite;
+}
+/* TITLE */
+.login-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0D1F3C;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* INPUT AREA */
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    color:#0D1F3C;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.input-group input {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.8);
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus {
+    background: white;
+    transform: scale(1.03);
+    box-shadow: 0 0 8px rgba(255,255,255,0.7);
+}
+
+/* BUTTON */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(to right, #4aa8ff, #2c67f2);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* FOOTER TEXT */
+.login-footer {
+    text-align: center;
+    margin-top: 15px;
+    color: #0D1F3C;
+    font-size: 14px;
+}
+
+.login-footer a {
+    color:  #1c7ec3;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+
+.cloud {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    opacity: 0.15;
+    margin: 40px;
+}
+.cloud {
+    position: absolute;
+    width: 220px;
+    height: 120px;
+}
+
+.cloud span {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    filter: blur(3px);
+
+}
+
+
+.cloud span:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 10px;
+}
+
+.cloud span:nth-child(2) {
+    width: 80px;
+    height: 70px;
+    top: 5px;
+    left: 40px;
+}
+
+.cloud span:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 90px;
+}
+
+
+.cloud span:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    top: 35px;
+    left: 60px;
+}
+
+#cloud1 {
+    width: 100px;
+    height: 60px;
+    top: 50px;
+    left: 10%;
+   
+}
+#cloud2 {
+    width: 150px;
+    height: 90px;
+    top: 150px;
+    left: 60%;
+    
+}
+
+#cloud3 {
+    width: 80px;
+    height: 50px;
+    top: 250px;
+    left: 30%;
+ 
+}
+
+#cloud4 {
+    width: 120px;
+    height: 70px;
+    top: 350px;
+    left: 5%;
+    
+}
+#cloud1 { animation: moveClouds 90s linear infinite; }
+#cloud2 { animation: moveClouds 120s linear infinite; }
+#cloud3 { animation: moveClouds 100s linear infinite; }
+#cloud4 { animation: moveClouds 140s linear infinite; }
+
+@keyframes moveClouds {
+    0%   { transform: translateX(-20vw); }
+    100% { transform: translateX(120vw); }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        margin: 80px auto;
+        padding: 12px 18px 20px 18px;
+    }
+
+    .login-title { font-size: 22px; }
+
+    .input-group input { font-size: 15px; padding: 10px; }
+
+    .cloud { display: none; }
+}
+
+@media (max-width: 420px) {
+    .login-container { margin: 50px 10px; padding: 10px 14px; }
+    .login-title { font-size: 20px; }
+    .login-btn { font-size: 16px; padding: 10px; }
+}
