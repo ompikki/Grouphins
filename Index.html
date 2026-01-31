@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Project Dashboard</title>
+  <link rel="stylesheet" href="Main_page.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="top-nav">
+    <h1>Project Dashboard</h1>
+    <div class="profile">👤</div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li>🏠 Dashboard</li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- DASHBOARD -->
+    <section class="dashboard">
+      <h2>Dashboard</h2>
+      <div class="project-grid">
+        <!-- Create Project Card -->
+        <div class="project-card create-project">
+          <div class="plus-icon">+</div>
+          <p>Create New Project</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT DETAILS -->
+    <section class="project-details" style="display:none;">
+      <button class="back-btn">← Back to Dashboard</button>
+      <h2 class="project-title">Project Title</h2>
+      <p class="project-due">Due Date</p>
+      <p class="project-desc">Description</p>
+      <button class="add-task-btn">+ Add Task</button>
+
+      <table class="task-table">
+        <thead>
+          <tr>
+            <th>Task Title</th>
+            <th>Status</th>
+            <th>Assigned To</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Create Project Modal -->
+  <div id="createProjectModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Create New Project</h2>
+      <form id="createProjectForm">
+        <label for="projectTitle">Project Title</label>
+        <input type="text" id="projectTitle" required autofocus>
+        <label for="projectDesc">Description</label>
+        <textarea id="projectDesc" rows="3" required></textarea>
+        <label for="projectDue">Due Date</label>
+        <input type="date" id="projectDue" required>
+        <button type="submit" class="btn-primary">Create Project</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Add Task Modal -->
+  <div id="addTaskModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add Task</h2>
+      <form id="addTaskForm">
+        <label for="taskTitle">Task Title</label>
+        <input type="text" id="taskTitle" required autofocus>
+        <label for="taskStatus">Status</label>
+        <select id="taskStatus">
+          <option value="To Do">To Do</option>
+          <option value="Doing">Doing</option>
+          <option value="Done">Done</option>
+        </select>
+        <label for="taskAssignee">Assign To</label>
+        <input type="text" id="taskAssignee" required>
+        <button type="submit" class="btn-primary">Add Task</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="Main.js"></script>
+</body>
+</html>
